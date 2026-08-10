@@ -1,0 +1,18 @@
+{
+  "name": "message_board",
+  "version": "1.0.0",
+  "description": "slit-flap style message board website",
+  "license": "ISC",
+  "author": "DACodes",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --env-file=.env index.js",
+    "serve": "node --watch index.js"
+  },
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1"
+  }
+}

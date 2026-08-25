@@ -1,9 +1,6 @@
 import { Pool } from "pg";
 
 const pool = new Pool({
-    host: 'localhost',
-    user: 'starlight',
-    database: 'messages_app_db',
-    port: '5432'
+    connectionString: "postgresql://postgres:BBqGciWpsxAyGyUaLUjlMVKQnSNylewY@postgres-gs4f.railway.internal:5432/railway"
 })
 export default pool

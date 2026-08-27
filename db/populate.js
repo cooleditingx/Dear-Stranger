@@ -3,14 +3,15 @@ import { Client } from "pg";
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  message VARCHAR ( 255 )
+  message VARCHAR ( 255 ),
+  username VARCHAR ( 255 )
 );
 
-INSERT INTO messages
+INSERT INTO messages (message, username)
 VALUES
-  (default,'hi from bryan','Bryan'),
-  (default,'kneel before me',Odin'),
-  (default,'gloriuos purpose','loki);
+  ('hi from bryan', 'Bryan'),
+  ('kneel before me', 'Odin'),
+  ('gloriuos purpose', 'loki');
 `;
 
 async function main() {

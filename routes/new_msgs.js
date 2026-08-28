@@ -1,6 +1,6 @@
 import express from 'express'
 import { Router } from 'express'
-import {getMessages,createMessages,createMessagesPost} from '../controllers/messages.js'
+import {getMessages,createMessages,createMessagesPost, displayMessages} from '../controllers/messages.js'
 const new_msgs_router = Router()
 
 // new_msgs_router.set('view engine','ejs')

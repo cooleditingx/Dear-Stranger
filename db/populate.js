@@ -16,9 +16,15 @@ VALUES
 
 async function main() {
   console.log("seeding...");
-  const client = new Client({
-    connectionString: process.env.URL,
-  });
+  const client = new Client ({
+    host: 'localhost',
+    user: 'starlight',
+    database: 'messages_app_db',
+    port: 5432
+  })
+//   const client = new Client({
+//     connectionString: process.env.URL,
+//   });
   await client.connect();
   await client.query(SQL);
   await client.end();

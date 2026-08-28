@@ -1,7 +1,8 @@
 import db from '../db/queries.js'
 async function getMessages(req,res){
     const messages = await db.getAllMessages()
-    res.send(`From User: ${messages.map(msg => `${msg.username} Message: ${msg.message}`).join(", ")}`)
+    res.render('index',{messages: messages})
+    // res.send(`From User: ${messages.map(msg => `${msg.username} Message: ${msg.message}`).join(", ")}`)
 }
 function createMessages(req,res){
     res.render('form')

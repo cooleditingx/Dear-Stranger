@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <% messages.forEach((message,index) => { %>
-    <h1> <%= message.text %> </h1>
+    <% messages.forEach((message) => { %>
+    <h1> <%= message.message %> </h1>
     <h1> <%= message.username %> </h1>
-    <h1> <%= message.added %> </h1>
     <% }) %>
     <button onclick="window.location.href = '/new'">ADD Message</button>
 </body>

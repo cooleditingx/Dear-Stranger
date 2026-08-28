@@ -10,7 +10,6 @@ const __dirname = import.meta.dirname
 
 app.set('view engine','ejs')
 app.set('views','views')
-
 // app.get("/",(req,res)=> {
 //     res.render('index',{messages: messages})
 // })

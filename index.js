@@ -1,13 +1,15 @@
-import path from 'express'
+// import path from 'express'
 import express from 'express'
 import ejs from 'ejs'
 import formRouter from './routes/new_msgs.js'
 import new_msgs_router from './routes/new_msgs.js'
-
+import path from "path"
 
 const app = express()
 const __dirname = import.meta.dirname
+const assetPath = path.join(__dirname, "/public")
 
+app.use(express.static(assetPath))
 app.set('view engine','ejs')
 app.set('views','views')
 // app.get("/",(req,res)=> {

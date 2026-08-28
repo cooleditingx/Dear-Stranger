@@ -1,17 +1,25 @@
+@font-face {
+    font-family: snell;
+    src: url("../assets/SnellRoundhand.ttc");
+}
+
 body {
     background-color: antiquewhite;
+    font-size: 16px;
 }
 .heading{
     text-align: center;
     color: black;
-    font-size: 5rem;
+    font-size: 10rem;
+    font-family: snell;
 }
 .header{
     text-align: center;
     color: black;
-    font-size: 7rem;
+    font-size: 15rem;
+    font-family: snell;
 }
 .intro{
     color: #1f110b;
-    font-size: 1rem;
+    font-size: 2rem;
 }

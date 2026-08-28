@@ -2,6 +2,10 @@
     font-family: snell;
     src: url("../assets/SnellRoundhand.ttc");
 }
+@font-face {
+    font-family: farmhouse;
+    src: url("../public/assets/Farmhouse.otf");
+}
 
 body {
     background-color: antiquewhite;
@@ -22,6 +26,8 @@ body {
     margin: 0;
 }
 .intro{
-    color: #1f110b;
+    color: #55493f;
     font-size: 2rem;
+    text-align: center;
+    font-family: "farmhouse";
 }

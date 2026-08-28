@@ -11,13 +11,14 @@ body {
     text-align: center;
     color: black;
     font-size: 10rem;
-    font-family: snell;
+    font-family: "snell";
+
 }
 .header{
     text-align: center;
     color: black;
     font-size: 15rem;
-    font-family: snell;
+    font-family: "snell";
 }
 .intro{
     color: #1f110b;

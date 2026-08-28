@@ -27,12 +27,14 @@ body {
     font-family: "snell";
     margin: 0;
     line-height: 180px;
-    padding: 4rem;
+    padding: 6rem;
     padding-top: 0;
 }
 .intro{
     color: #55493f;
     font-size: 2rem;
     text-align: center;
+    margin: auto;
+    width: 70%;
     font-family: "farmhouse";
 }

@@ -12,7 +12,6 @@ body {
     font-size: 16px;
 }
 .stamp-border {
-    .stamp-border {
   /* Change this value to adjust the stamp perforation size: */
   --radius: 8px;
 
@@ -32,7 +31,6 @@ body {
   background-size:
     calc(var(--radius) * 3) calc(var(--radius) * 3),
     calc(100% - var(--radius) * 3) calc(100% - var(--radius) * 3);
-}
 }
 .stamp-border {
   width: min(50%, 600px);

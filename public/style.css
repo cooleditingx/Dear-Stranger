@@ -14,7 +14,7 @@ body {
 .stamp-border {
   /* Change this value to adjust the stamp perforation size: */
   --radius: 12px;
-
+    align-items: center;
   background-image: 
     radial-gradient(
       var(--radius),
@@ -31,6 +31,7 @@ body {
   background-size:
     calc(var(--radius) * 3) calc(var(--radius) * 3),
     calc(100% - var(--radius) * 3) calc(100% - var(--radius) * 3);
+
 }
 .stamp-border {
   width: 60%;
@@ -46,8 +47,6 @@ body {
     font-size: 7rem;
     font-family: "snell";
     margin: 0;
-    line-height: 160px;
-    padding-top: 4rem;
 }
 .header{
     text-align: center;
@@ -55,8 +54,8 @@ body {
     font-size: 10rem;
     font-family: "snell";
     margin: 0;
-    line-height: 180px;
-    padding: 6rem;
+    line-height: 100px;
+    padding-bottom: 4rem;
     padding-top: 0;
 }
 .intro{
@@ -66,4 +65,7 @@ body {
     margin: auto;
     width: 70%;
     font-family: "farmhouse";
+}
+.submit {
+    display: block;
 }

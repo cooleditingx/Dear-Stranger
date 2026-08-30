@@ -34,7 +34,7 @@ body {
 }
 .stamp-border {
   width: 60%;
-  height: (max(50%, fit-content));
+  height: 50%;
   position: fixed;
   inset: 0;
   margin: auto;

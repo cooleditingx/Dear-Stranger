@@ -8,8 +8,38 @@
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: #5e0105;
     font-size: 16px;
+}
+.stamp-border {
+    .stamp-border {
+  /* Change this value to adjust the stamp perforation size: */
+  --radius: 8px;
+
+  background-image: 
+    radial-gradient(
+      var(--radius),
+      transparent 98%,
+      antiquewhite
+    ),
+    linear-gradient(antiquewhite 0 0);
+  background-repeat: 
+    round, 
+    no-repeat;
+  background-position:
+    calc(var(--radius) * -1.5) calc(var(--radius) * -1.5),
+    50%;
+  background-size:
+    calc(var(--radius) * 3) calc(var(--radius) * 3),
+    calc(100% - var(--radius) * 3) calc(100% - var(--radius) * 3);
+}
+}
+.stamp-border {
+  width: min(50%, 600px);
+  height: 50%;
+  position: fixed;
+  inset: 0;
+  margin: auto;
 }
 .heading{
     text-align: center;

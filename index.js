@@ -5,7 +5,6 @@ import formRouter from './routes/new_msgs.js'
 import new_msgs_router from './routes/new_msgs.js'
 import path from "path"
 import multer from 'multer'
-import multer from 'multer'
 import {GetImages,UploadImages} from "./controllers/storeimgs.js"
 
 const app = express()

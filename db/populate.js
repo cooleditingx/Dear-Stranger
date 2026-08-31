@@ -7,6 +7,16 @@ CREATE TABLE IF NOT EXISTS messages (
   username VARCHAR ( 255 )
 );
 
+CREATE TABLE IF NOT EXISTS images (
+  id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  imgname VARCHAR (255),
+  mimetype VARCHAR (100),
+  imgdata BYTEA,
+  createdate TIMESTAMP DEFAULT NOW()
+);
+INSERT INTO images (imgname,imgdata,mimetype)
+VALUES ('check','https://www.pinterest.com/pin/14988611255304048/', 'image/jpeg');
+
 INSERT INTO messages (message, username)
 VALUES
   ('hi from bryan', 'Bryan'),

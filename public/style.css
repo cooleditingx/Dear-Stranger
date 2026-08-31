@@ -48,6 +48,13 @@ body {
     font-family: "snell";
     margin: 0;
 }
+.msgs-heading{
+    text-align: center;
+    color: antiquewhite;
+    font-size: 4rem;
+    font-family: "snell";
+    margin: 0;
+}
 .header{
     text-align: center;
     color: black;
@@ -78,13 +85,33 @@ body {
     margin: 1rem auto;
     cursor: pointer;
 }
+.msgs-submit {
+    display: block;
+    background-color: antiquewhite;
+    color: #5e0105;
+    border-radius: 12px;
+    border: none;
+    font-family: "snell";
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    /* margin: 1rem auto; */
+    cursor: pointer;
+}
 .cards{
     display: grid;
-    grid-template-columns: 3 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    gap: 1rem;
+    gap: 2rem;
+    margin: 2rem;
 }
 .front-card{
     background-color: #55493f;
-    border: antiquewhite 1rem 1rem 1rem 1.5rem solid;
+    border: antiquewhite 0.5rem solid;
+    border-bottom-width: 1rem ;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 2rem;
 }

@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS images (
   createdate TIMESTAMP DEFAULT NOW()
 );
 INSERT INTO images (imgname,imgdata,mimetype)
-VALUES ('check','https://www.pinterest.com/pin/14988611255304048/', 'image/jpeg');
+VALUES ('check','https://i.pinimg.com/1200x/22/b2/67/22b2672ae734935f753c6e1f82d25be5.jpg', 'image/jpeg');
 
 INSERT INTO messages (message, username)
 VALUES

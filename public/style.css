@@ -64,14 +64,15 @@ body {
     text-align: center;
     margin: auto;
     width: 70%;
-    font-family: "farmhouse";
+    font-family:serif;
 }
 .submit {
     display: block;
     background-color: #5e0105;
     color: antiquewhite;
-    border-radius: 18px;
+    border-radius: 12px;
     border: none;
     font-family: "snell";
-    font-size: 1rem;
+    font-size: 1.5rem;
+    margin: 1rem auto;
 }

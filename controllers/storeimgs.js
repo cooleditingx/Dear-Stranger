@@ -1,5 +1,5 @@
 import express from "express"
-import pool from "../db/pool"
+import pool from './pool.js'
 
 
 async function GetImages (req,res){

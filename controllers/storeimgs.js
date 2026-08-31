@@ -27,4 +27,4 @@ async function UploadImages (req,res){
         res.status(505).send("Upload failed")
     }
 }
-export default {GetImages, UploadImages}
+export {GetImages, UploadImages}

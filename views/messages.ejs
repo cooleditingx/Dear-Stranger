@@ -7,10 +7,21 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <% messages.forEach((message) => { %>
-    <h1> <%= message.message %> </h1>
-    <h1> <%= message.username %> </h1>
-    <% }) %>
-    <button onclick="window.location.href = '/new'">ADD Message</button>
+    <nav>
+        <h2 class="heading">Dear Stranger</h2>
+        <button class="submit" onclick="window.location.href = '/new'">Add Message</button>
+    </nav>
+    <div class="cards">
+        <% messages.forEach((message) => { %>
+        <div class="front-card">
+            <h1> <%= message.message %> </h1>
+        </div>
+        <div class="front-card">
+            <h1> <%= message.username %> </h1>
+        </div>
+        <div class="front-card"></div>
+        <div class="front-card"></div>
+        <% }) %>
+    </div>
 </body>
 </html>

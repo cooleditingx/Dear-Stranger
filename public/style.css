@@ -68,4 +68,10 @@ body {
 }
 .submit {
     display: block;
+    background-color: #5e0105;
+    color: antiquewhite;
+    border-radius: 18px;
+    border: none;
+    font-family: "snell";
+    font-size: 1rem;
 }

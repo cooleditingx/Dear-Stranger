@@ -9,18 +9,21 @@
 <body>
     <nav class="nav">
         <h2 class="msgs-heading">Dear Stranger</h2>
-        <img src="/img/2" alt="img">
         <button class="msgs-submit" onclick="window.location.href = '/new'">Add Message</button>
     </nav>
     <div class="cards">
         <% messages.forEach((message) => { %>
         <div class="front-card">
             <h1> <%= message.message %> </h1>
+            <img src="/img/2" alt="img">
         </div>
         <div class="front-card">
             <h1> <%= message.username %> </h1>
+            <img src="/img/1" alt="img">
         </div>
-        <div class="front-card"></div>
+        <div class="front-card">
+            <img src="/img/3" alt="img">
+        </div>
         <div class="front-card"></div>
         <% }) %>
     </div>

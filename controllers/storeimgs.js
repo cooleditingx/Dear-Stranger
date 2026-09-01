@@ -4,13 +4,13 @@ import pool from '../db/pool.js'
 
 async function GetImages (req,res){
     try{
-        const result = await pool.query("SELECT mimetype, data FROM images WHERE id = $1",[req.params.id])
+        const result = await pool.query("SELECT mimetype, imgdata FROM images WHERE id = $1",[req.params.id])
         if (result.rows.length === 0){
             return res.status(404).send("Not Found")
         }
-        const {mimetype, data} = result.rows[0]
+        const {mimetype, imgdata} = result.rows[0]
         res.set("Content-type", mimetype)
-        res.send(data)
+        res.send(imgdata)
     }   
     catch(err){
         console.log("error")
@@ -20,7 +20,7 @@ async function GetImages (req,res){
 async function UploadImages (req,res){
     try {
         const {mimetype, imgname, buffer } = req.file
-        const result = await pool.query("INSERT INTO images (imgname,mimetype,data) VALUES ($1, $2, $3) RETURNING id", [imgname,mimetype,buffer])
+        const result = await pool.query("INSERT INTO images (imgname,mimetype,imgdata) VALUES ($1, $2, $3) RETURNING id", [imgname,mimetype,buffer])
         res.json({id: result.rows[0].id})
     } catch (error) {
         console.log("error")

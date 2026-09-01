@@ -1,6 +1,6 @@
 import { Client } from "pg";
 import fs from 'fs'
-import pool from "./pool";
+import pool from "../db/pool.js";
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,

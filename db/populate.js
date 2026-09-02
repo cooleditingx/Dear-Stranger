@@ -4,21 +4,18 @@ import pool from "../db/pool.js";
 import path from "path";
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
-  imgid SERIAL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  imgesid INTEGER UNIQUE REFERENCES images(imgid) ON DELETE SET NULL,
   message VARCHAR ( 255 ),
   username VARCHAR ( 255 )
 );
 
 CREATE TABLE IF NOT EXISTS images (
+  imgid SERIAL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   imgname VARCHAR (255),
   mimetype VARCHAR (100),
-  imgesid INTEGER UNIQUE REFERENCES images(imgid) ON DELETE SET NULL
   imgdata BYTEA,
   createdate TIMESTAMP DEFAULT NOW()
 );
-INSERT INTO images (imgname,imgdata,mimetype)
-VALUES ('check','https://i.pinimg.com/1200x/22/b2/67/22b2672ae734935f753c6e1f82d25be5.jpg', 'image/jpeg');
-
 INSERT INTO messages (message, username)
 VALUES
   ('hi from bryan', 'Bryan'),
@@ -41,7 +38,7 @@ async function insertImage(filepath) {
     const mimetype = mimeMap[ext] || 'application/octet-stream';
 
     const result = await pool.query(
-      'INSERT INTO images (imgname, mimetype, imgdata) VALUES ($1, $2, $3) RETURNING id',
+      'INSERT INTO images (imgname, mimetype, imgdata) VALUES ($1, $2, $3) RETURNING imgid',
       [filename, mimetype, buffer]
     );
 

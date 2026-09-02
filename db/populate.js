@@ -58,11 +58,8 @@ async function main() {
   console.log("seeding...");
   await client.query(SQL_TABLES);
 
-  const skyImgId = await insertImage(client, 'public/assets/Texturelabs_Sky_122M.jpg');
-  const fishImgId = await insertImage(client, 'public/assets/fish-photobooth.png');
-  await insertMessage(client, 'hi from bryan', 'Bryan', skyImgId);
-  await insertMessage(client, 'kneel before me', 'Odin', fishImgId);
-  await insertMessage(client, 'glorious purpose', 'loki', null); // no image for this one
+  const parisImgId = await insertImage(client, 'public/assets/pexels-steve-29506609.jpg')
+  await insertMessage(client, 'this is the most amazing place i have ever seen', 'Paris', parisImgId);
   await client.end();
   console.log("done");
 }

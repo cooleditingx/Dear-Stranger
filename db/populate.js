@@ -52,7 +52,7 @@ async function insertMessage(client, message, username, imgid = null) {
 
 async function main() {
   const client = new Client({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: process.env.URL,
   });
   await client.connect();
   console.log("seeding...");

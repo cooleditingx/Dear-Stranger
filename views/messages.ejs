@@ -14,7 +14,10 @@
     <div class="cards">
         <% messages.forEach((message) => { %>
         <div class="front-card">
-            <img src="/img/2" alt="img">
+            if (message.imgid){
+                <% const id = `/img/${message.imgid}` %>
+                <img src=<% id %> alt="img">
+            }
             <p> <%= message.message %> </p>
         </div>
         <% }) %>

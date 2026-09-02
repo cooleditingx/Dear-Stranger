@@ -8,6 +8,7 @@ import multer from 'multer'
 import {GetImages,UploadImages} from "./controllers/storeimgs.js"
 
 const app = express()
+const storage = multer.diskStorage
 const upload = multer({storage: multer.memoryStorage()})
 const __dirname = import.meta.dirname
 const assetPath = path.join(__dirname, "/public")

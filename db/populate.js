@@ -4,15 +4,15 @@ import pool from "../db/pool.js";
 import path from "path";
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
-  id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  imgid SERIAL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   message VARCHAR ( 255 ),
   username VARCHAR ( 255 )
 );
 
 CREATE TABLE IF NOT EXISTS images (
-  id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   imgname VARCHAR (255),
   mimetype VARCHAR (100),
+  imgesid INTEGER UNIQUE REFERENCES images(imgid) ON DELETE SET NULL
   imgdata BYTEA,
   createdate TIMESTAMP DEFAULT NOW()
 );
@@ -54,7 +54,7 @@ async function insertImage(filepath) {
 }
 
 insertImage('public/assets/Texturelabs_Sky_122M.jpg');
-
+insertImage('public/assets/fish-photobooth.png')
 async function main() {
   console.log("seeding...");
 //   const client = new Client ({

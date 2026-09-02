@@ -115,3 +115,12 @@ body {
     align-items: flex-end;
     margin: 2rem;
 }
+.img-con {
+    width: 10rem;
+    height: 10rem;
+}
+.subtitle {
+    background-color: antiquewhite;
+    font-size: 1rem;
+    font-family: "snell";
+}

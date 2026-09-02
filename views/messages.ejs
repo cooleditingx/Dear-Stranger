@@ -15,11 +15,13 @@
         <% messages.forEach((message) => { %>
         <div class="front-card">
             <% if (message.imgid) { %>
-                <img src="/img/<%= message.imgid %>" alt="img">
+                <div class="img-con">
+                <img class="img" src="/img/<%= message.imgid %>" alt="img">
             <% } else { %>
                 <img src="/img/placeholder.png" alt="no image">
             <% } %>
-            <p> <%= message.message %> </p>
+                </div>
+            <p class="subtitle"> <%= message.message %> </p>
         </div>
         <% }) %>
     </div>

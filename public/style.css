@@ -12,6 +12,7 @@ body {
     font-size: 16px;
 }
 .stamp-border {
+  /* Change this value to adjust the stamp perforation size: */
   --radius: 12px;
     align-items: center;
   background-image: 
@@ -141,49 +142,48 @@ body {
 }
 .card {
     position: relative;
-perspective: 1200px;
-}
-.card-back {
-    position: absolute;
+    perspective: 1500px;
     height: 18rem;
-    width: 100%;
-background: #e1baa9;
-display: flex;
-padding: 18px 20px;
-z-index: 1;
 }
 .front-card {
     position: absolute;
-z-index: 2;
-transform-style: preserve-3d;
-transform-origin: top center;
-backface-visibility: hidden;
-transition: transform 0.9s ease-in-out;
+    inset: 0;
+    z-index: 2;
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    backface-visibility: hidden;
+    transition: transform 0.9s ease-in-out;
 }
-
-.cards:hover .front-card {
-transform: rotateX(-180deg);
+.card-back {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: antiquewhite;
+    color: #5e0105;
+    border: #55493f 0.5rem solid;
+    border-bottom-width: 1rem;
+    padding: 1.5rem;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
 .card-back .message {
-flex: 1.4;
-color: #fff;
-font-size: 14px;
-line-height: 1.5;
-padding-right: 14px;
-border-right: 1px solid rgba(255,255,255,0.4);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
 }
-
 .card-back .address {
-flex: 1;
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-gap: 6px;
-padding-left: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+.card-back .address-line {
+    height: 1px;
+    background: rgba(94, 1, 5, 0.4);
 }
 
-.card-back .address-line {
-height: 1px;
-background: rgba(255,255,255,0.5);
+.card:hover .front-card {
+    transform: rotateX(-180deg);
 }

@@ -153,6 +153,7 @@ body {
     transform-origin: top center;
     backface-visibility: hidden;
     transition: transform 0.9s ease-in-out;
+    box-sizing: border-box;
 }
 .card-back {
     position: absolute;

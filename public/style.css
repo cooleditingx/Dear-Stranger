@@ -245,3 +245,24 @@ body {
   color: #404040;
   cursor: pointer;
 }
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+body.formbody {
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    padding: 0%;
+}
+.info {
+    color: white;
+    font-size: 1rem;
+}
+.messageslabel, .citylabel {
+    display: flex;
+    flex-direction: row;
+}

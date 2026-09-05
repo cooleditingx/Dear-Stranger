@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="/new" method="POST" enctype="multipart/form-data">
-        <label for="messages">Message</label>
-        <input type="text" name="messages" id="messages">
-        <label for="user">City</label>
-        <input type="text" name="username" id="username">
+    <form class="form" action="/new" method="POST" enctype="multipart/form-data">
+        <div class="messageslabel">
+            <label for="messages">Message</label>
+            <input type="text" name="messages" id="messages">
+        </div>
+        <div class="citylabel">
+            <label for="user">City</label>
+            <input type="text" name="username" id="username">
+        </div>
         <label for="file" class="labelFile">
             <span><svg
                 xml:space="preserve"
@@ -50,7 +54,7 @@
           </g>
             </g>
         </g></svg></span>
-    <p>Drag and drop your file here or click to select a file!</p></label
+    <p class="info">Drag and drop your file here or click to select a file!</p></label
     >
     <input class="input" name="image" id="image" type="file" accept="image/*" required/>
             <button type="submit">Post</button>

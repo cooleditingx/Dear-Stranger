@@ -171,6 +171,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: min-content;
 }
 .headingback {
     margin: 0;
@@ -179,6 +180,7 @@ body {
     margin: 0.5rem 0;
     text-wrap: nowrap;
     font-size: small;
+    width: fit-content;
 }
 .card-back .messageback {
     font-size: 1.1rem;

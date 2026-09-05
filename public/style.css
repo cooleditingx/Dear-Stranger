@@ -248,7 +248,8 @@ body {
 .form {
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 60%;
+    width: 80%;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -268,6 +269,7 @@ body.formbody {
 .messageslabel, .citylabel {
     display: flex;
     flex-direction: row;
+    width: 29rem;
 }
 label {
     color: white;
@@ -283,8 +285,11 @@ label {
  font-size: 1rem;
  color: #f5f5f5;
  transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+ width: 100%;
 }
-
+.inputbox#messages {
+    height: 15rem;
+}
 .textlabel {
  position: absolute;
  left: 15px;

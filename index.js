@@ -21,9 +21,8 @@ app.set('views','views')
 // })
 app.use(express.urlencoded({ extended: true }));
 app.use("/",new_msgs_router)
-app.use("/",new_msgs_router)
 app.get("/img/:id",GetImages)
-app.post("/upload",UploadImages)
+app.post("/upload", upload.single("image"), UploadImages)
 
 app.listen(process.env.PORT,(error) => {
     if (error)

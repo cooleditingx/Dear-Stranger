@@ -1,4 +1,5 @@
 import db from '../db/queries.js'
+import { insertImage } from './storeimgs.js'
 async function getMessages(req,res){
     const messages = await db.getAllMessages()
     res.render('messages',{messages: messages})
@@ -15,7 +16,12 @@ function gethp (req,res){
 // }
 async function createMessagesPost(req,res){
     const {messages,username} = req.body
-    await db.insertMessages(messages,username)
+    let imgid = null
+    if (req.file){
+        const {mimetype, originalname, buffer} = req.file
+        imgid = await insertImage(mimetype, originalname, buffer)
+    }
+    await db.insertMessages(messages,username,imgid)
     res.redirect("/")
 }
 

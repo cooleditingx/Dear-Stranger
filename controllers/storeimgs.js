@@ -17,14 +17,19 @@ async function GetImages (req,res){
         res.status("500").send("Error Fetching image")
     }
 }
+async function insertImage(mimetype, imgname, buffer){
+    const result = await pool.query("INSERT INTO images (imgname,mimetype,imgdata) VALUES ($1, $2, $3) RETURNING imgid", [imgname,mimetype,buffer])
+    return result.rows[0].imgid
+}
+
 async function UploadImages (req,res){
     try {
         const {mimetype, originalname, buffer } = req.file
-        const result = await pool.query("INSERT INTO images (originalname,mimetype,imgdata) VALUES ($1, $2, $3) RETURNING imgid", [originalname,mimetype,buffer])
-        res.json({id: result.rows[0].id})
+        const imgid = await insertImage(mimetype, originalname, buffer)
+        res.json({id: imgid})
     } catch (error) {
         console.log("error")
         res.status(505).send("Upload failed")
     }
 }
-export {GetImages, UploadImages}
+export {GetImages, UploadImages, insertImage}

@@ -236,8 +236,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 250px;
-  height: 190px;
+  width: 29rem;
   border: 2px dashed #ccc;
   align-items: center;
   text-align: center;
@@ -247,11 +246,17 @@ body {
 }
 .form {
     display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 3rem;
+    width: 90%;
+}
+.form-left {
+    display: flex;
     flex-direction: column;
-    height: 60%;
-    width: 80%;
-    align-items: center;
-    justify-content: space-evenly;
+    gap: 1.5rem;
+    width: 29rem;
 }
 body.formbody {
     height: 100vh;

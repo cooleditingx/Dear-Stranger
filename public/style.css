@@ -66,7 +66,8 @@ body {
 }
 .intro{
     color: #55493f;
-    font-size: 2rem;
+    font-size: 3rem;
+    text-transform: capitalize;
     text-align: center;
     margin: auto;
     width: 70%;
@@ -243,6 +244,7 @@ body {
   padding: 5px;
   color: #404040;
   cursor: pointer;
+  background-color: #fbead72b;
 }
 .labelFile.dragover {
   border-color: #fff;

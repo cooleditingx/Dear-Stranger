@@ -167,20 +167,20 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
-.header {
+.headerback {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.heading {
+.headingback {
     margin: 0;
 }
-.subheading {
+.subheadingback {
     margin: 0.5rem 0;
     text-wrap: nowrap;
     font-size: small;
 }
-.card-back .message {
+.card-back .messageback {
     font-size: 1.1rem;
     line-height: 1.5;
     margin: 0;

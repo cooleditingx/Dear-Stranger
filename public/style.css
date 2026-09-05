@@ -66,8 +66,7 @@ body {
 }
 .intro{
     color: #55493f;
-    font-size: 3rem;
-    text-transform: capitalize;
+    font-size: 2rem;
     text-align: center;
     margin: auto;
     width: 70%;
@@ -135,10 +134,11 @@ body {
 }
 .subtitle {
     background-color: antiquewhite;
-    font-size: 1rem;
+    font-size: 2rem;
     font-family: "snell";
     margin: 0;
     padding-top: 1%;
+    text-transform: capitalize;
 }
 .card {
     position: relative;

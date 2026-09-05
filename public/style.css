@@ -6,7 +6,6 @@
     font-family: farmhouse;
     src: url("../assets/Farmhouse.ttf");
 }
-
 body {
     background-color: #5e0105;
     font-size: 16px;
@@ -160,13 +159,12 @@ body {
     inset: 0;
     z-index: 1;
     background-color: antiquewhite;
+    background-image: url("../public/assets/Texturelabs_Paper_178M.jpg");
     color: #5e0105;
-    border: #55493f 0.5rem solid;
-    border-bottom-width: 1rem;
     padding: 1.5rem;
     font-family: sans-serif;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
 }
 .card-back .message {
@@ -181,7 +179,7 @@ body {
     margin-top: auto;
 }
 .card-back .address-line {
-    height: 1px;
+    width: 3px;
     background: rgba(94, 1, 5, 0.4);
 }
 

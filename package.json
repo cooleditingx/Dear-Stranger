@@ -12,6 +12,7 @@
     "serve": "node --watch index.js"
   },
   "dependencies": {
+    "@paper-design/shaders-react": "^0.0.80",
     "ejs": "^6.0.1",
     "express": "^5.2.1",
     "multer": "^2.3.0",

@@ -6,12 +6,13 @@
     <title>Form</title>
 </head>
 <body>
-    <form action="/new" method="POST">
+    <form action="/upload" method="POST" enctype="multipart/form-data">
         <label for="messages">Message</label>
         <input type="text" name="messages" id="messages">
-        <label for="user">User Name</label>
+        <label for="user">City</label>
         <input type="text" name="username" id="username">
-        <button type="submit">Submit</button>
+        <input type="file" name="image" id="image" accept="image/*" required>
+        <button type="submit">Post</button>
     </form>
 </body>
 </html>

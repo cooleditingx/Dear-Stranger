@@ -36,3 +36,24 @@ dropLabel.addEventListener('drop', (e) => {
 });
 
 fileInput.addEventListener('change', updateInfoText);
+
+const form = document.querySelector('.form');
+const popupOverlay = document.getElementById('popupOverlay');
+const popupClose = document.getElementById('popupClose');
+
+form.addEventListener('submit', (e) => {
+  if (!fileInput.files.length) {
+    e.preventDefault();
+    popupOverlay.classList.add('active');
+  }
+});
+
+popupClose.addEventListener('click', () => {
+  popupOverlay.classList.remove('active');
+});
+
+popupOverlay.addEventListener('click', (e) => {
+  if (e.target === popupOverlay) {
+    popupOverlay.classList.remove('active');
+  }
+});

@@ -78,8 +78,14 @@
         </g></svg></span>
     <p class="info">Drag and drop your file here or click to select a file!</p></label
     >
-    <input class="input" name="image" id="image" type="file" accept="image/*" required/>
+    <input class="input" name="image" id="image" type="file" accept="image/*"/>
     </form>
+    <div class="popup-overlay" id="popupOverlay">
+      <div class="popup">
+        <p class="popup-message">Please add a picture to send a postcard!</p>
+        <button type="button" class="popup-close" id="popupClose">OK</button>
+      </div>
+    </div>
     <script src="fileUpload.js"></script>
 </body>
 </html>

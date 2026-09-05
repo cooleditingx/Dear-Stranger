@@ -1,10 +1,10 @@
 @font-face {
     font-family: snell;
-    src: url("../assets/SnellRoundhand.ttc");
+    src: url("../assets/SnellRoundhand.woff2");
 }
 @font-face {
     font-family: farmhouse;
-    src: url("../assets/Farmhouse.ttf");
+    src: url("../assets/Farmhouse.woff2");
 }
 body {
     background-color: #5e0105;
@@ -243,6 +243,10 @@ body {
   padding: 5px;
   color: #404040;
   cursor: pointer;
+}
+.labelFile.dragover {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .form {
     display: flex;

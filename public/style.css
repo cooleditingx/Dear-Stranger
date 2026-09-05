@@ -257,6 +257,9 @@ body.formbody {
     display: flex;
     margin: 0;
     padding: 0%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 .info {
     color: white;
@@ -265,4 +268,7 @@ body.formbody {
 .messageslabel, .citylabel {
     display: flex;
     flex-direction: row;
+}
+label {
+    color: white;
 }

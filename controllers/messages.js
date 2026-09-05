@@ -22,7 +22,7 @@ async function createMessagesPost(req,res){
         imgid = await insertImage(mimetype, originalname, buffer)
     }
     await db.insertMessages(messages,username,imgid)
-    res.redirect("/")
+    res.redirect("/messages")
 }
 
 export {getMessages,createMessages,createMessagesPost,gethp}

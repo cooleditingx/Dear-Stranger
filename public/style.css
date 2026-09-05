@@ -411,3 +411,9 @@ button:active {
 .popup-close:hover {
     background-color: #7f0107;
 }
+.homeheading{
+    top: 0;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+}
